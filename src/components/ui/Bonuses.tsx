@@ -73,7 +73,7 @@ export default function Bonuses({
           {/* Desno — mockup slike (opciono) */}
           <div className="relative min-h-[320px]">
             <div
-              className="absolute -inset-10 blur-3xl opacity-25"
+              className="absolute max-w-fullblur-3xl opacity-25"
               style={{
                 background:
                   "radial-gradient(60% 60% at 60% 40%, rgba(66,224,123,0.25) 0%, rgba(0,0,0,0) 60%)",

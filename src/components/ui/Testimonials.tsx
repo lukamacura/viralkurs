@@ -100,13 +100,13 @@ export default function Testimonials({
         <h2 className="text-3xl sm:text-4xl font-stencil leading-tight">{heading}</h2>
 
         {gallery.length > 0 && (
-          <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
             {gallery.slice(0, 3).map((src, i) => (
               <img
                 key={i}
                 src={src}
                 alt={`chat-${i}`}
-                className="rounded-xl border border-white/10 bg-white/5 object-cover w-full h-32 sm:h-auto"
+                className="rounded-xl border border-white/10 bg-white/5 object-cover w-full h-full sm:h-auto"
               />
             ))}
           </div>

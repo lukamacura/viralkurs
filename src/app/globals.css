@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Tema (v4): imenuj boje kao --color-<ime> da bi radio npr. bg-<ime>, text-<ime> */
+@theme {
+  --color-bg: #0B0F0F;
+  --color-text: #f3eff5;
+  --color-muted: #e0d8de;
+  --color-primary: #53dd6c;
+  --color-primary-fg: #556f44;
+}
+
+/* Globalni base stilovi */
+:root {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;background-color: var(--color-bg); color: var(--color-text);
+  scroll-behavior: smooth;
+}
+
+/* V4 custom utilities (umesto extend/fontFamily u configu) */
+@utility font-supreme {
+  font-family: var(--font-supreme), system-ui, sans-serif;
+}
+
+@utility font-stencil {
+  font-family: var(--font-bespoke), system-ui, sans-serif;
+}

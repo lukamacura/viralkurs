@@ -23,7 +23,6 @@ export default function OfferCard({
   ],
   bonuses = [
     { text: "VODIČ: Kako organizovati dan i postati 3X produktivniji (realna vrednost 80 evra)" },
-    { text: "KLIJENT BOOST: Dovodimo ti klijenta čim naučiš osnove (ušteda 3 meseca mučenja)" },
     { text: "SISTEM ZA PRAĆENJE FINANSIJA: Notion template za praćenje zarade, troškova, budžeta (realna vrednost 120 evra)" },
     { text: "FOKUS SISTEM: Notion template za praćenje prioriteta, KPI‑eva… (realna vrednost 100 evra)" },
   ],

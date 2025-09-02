@@ -28,11 +28,7 @@ export default function Bonuses({
       title:
         "VODIČ: Kako organizovati dan i postati 3X produktivniji (realna vrednost 80 evra)",
     },
-    {
-      icon: <Rocket className="s w-7 text-primary" aria-hidden="true" />,
-      title:
-        "KLIJENT BOOST: Dovodimo ti klijenta čim naučiš osnove (ušteda 3 meseca mučenja)",
-    },
+
     {
       icon: (
         <WalletMinimal className="s w-7 text-primary" aria-hidden="true" />

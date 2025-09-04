@@ -33,8 +33,8 @@ export default function TermsPage() {
             </li>
             <li>
               Kontakt e-pošta:{" "}
-              <a className="underline hover:opacity-80" href="mailto:info@viralkurs.com">
-                info@viralkurs.com
+              <a className="underline hover:opacity-80" href="mailto:filipruvceski@gmail.com">
+                filipruvceski@gmail.com
               </a>
             </li>
           </ul>
@@ -171,8 +171,8 @@ export default function TermsPage() {
           <h2>15) Kontakt</h2>
           <p>
             Pitanja u vezi sa ovim Uslovima:{" "}
-            <a className="underline hover:opacity-80" href="mailto:info@viralkurs.com">
-              info@viralkurs.com
+            <a className="underline hover:opacity-80" href="mailto:filipruvceski@gmail.com">
+              filipruvceski@gmail.com
             </a>
             .
           </p>

@@ -78,8 +78,8 @@ export default function Footer() {
             <ul className="space-y-2 text-muted">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a className="hover:text-white transition" href="mailto:info@viralkurs.com">
-                  info@viralkurs.com
+                <a className="hover:text-white transition" href="mailto:filipruvceski@gmail.com">
+                  filipruvceski@gmail.com
                 </a>
               </li>
             </ul>

@@ -34,8 +34,8 @@ export default function PrivacyPage() {
 
             <li>
               Kontakt e-pošta:{" "}
-              <a className="underline hover:opacity-80" href="mailto:privacy@viralkurs.com">
-                privacy@viralkurs.com
+              <a className="underline hover:opacity-80" href="mailto:filipruvceski@gmail.com">
+                filipruvceski@gmail.com
               </a>
             </li>
           </ul>
@@ -148,8 +148,8 @@ export default function PrivacyPage() {
           </ul>
           <p>
             Zahtev pošalji na{" "}
-            <a className="underline hover:opacity-80" href="mailto:privacy@viralkurs.com">
-              privacy@viralkurs.com
+            <a className="underline hover:opacity-80" href="mailto:filipruvceski@gmail.com">
+              filipruvceski@gmail.com
             </a>
             . Odgovaramo u razumnom roku, u skladu sa važećim propisima (npr.
             GDPR ako se primenjuje).
@@ -183,8 +183,8 @@ export default function PrivacyPage() {
           <h2>13) Kontakt</h2>
           <p>
             Pitanja o privatnosti:{" "}
-            <a className="underline hover:opacity-80" href="mailto:privacy@viralkurs.com">
-              privacy@viralkurs.com
+            <a className="underline hover:opacity-80" href="mailto:filipruvceski@gmail.com">
+              filipruvceski@gmail.com
             </a>
             .
           </p>

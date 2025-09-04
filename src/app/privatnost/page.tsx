@@ -18,18 +18,15 @@ export default function PrivacyPage() {
         </h1>
         <p className="mt-3 text-muted">
           Ažurirano: 3. septembar 2025 • Važi za sajt/program{" "}
-          <strong>Viral Programi</strong>.
+          <strong>Viral Academy</strong>.
         </p>
 
         {/* Info box */}
         <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
-          <p className="text-sm text-muted">
-            <strong>Napomena:</strong> Zameni placeholdere stvarnim podacima pre
-            objave i po potrebi konsultuj pravnika.
-          </p>
+       
           <ul className="mt-2 list-disc pl-5 text-sm text-muted space-y-1">
             <li>
-              Viral Programi
+              Viral Academy
             </li>
 
             <li>

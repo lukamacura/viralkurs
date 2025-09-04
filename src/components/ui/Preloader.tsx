@@ -6,13 +6,13 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 type PreloaderProps = {
   slogans?: string[];
-  /** Minimalno vreme prikaza (ms) – produži ovde da duže ostane */
+  /** Minimalno vreme prikaza (ms) */
   minDurationMs?: number;
   /** Na koliko ms menjamo sledeći slogan */
   sloganIntervalMs?: number;
-  /** Koliko brzo se animira prelaz teksta (ms) – smanji za bržu tranziciju */
+  /** Brzina animacije prelaza teksta (ms) */
   sloganTransitionMs?: number;
-  /** Opcioni logo (SVG/PNG) */
+  /** Opcioni logo (SVG/PNG/WEBP/PNG) */
   logoSrc?: string;
   onFinish?: () => void;
 };
@@ -26,45 +26,67 @@ export default function Preloader({
     "Snimaj pametno, ne skupo.",
     "Sadržaj koji prodaje.",
   ],
-  minDurationMs = 1200,         // ⇦ POVEĆAJ npr. na 3000–4000
-  sloganIntervalMs = 1400,      // ⇦ Učestalost promene slogana
-  sloganTransitionMs = 350,     // ⇦ SMANJI (npr. 180) za brži prelaz
-  logoSrc = "mockups/offer.png",
+  minDurationMs = 1200,        // podigni npr. na 3000–4000 za duže zadržavanje
+  sloganIntervalMs = 1400,     // učestalost smene slogana
+  sloganTransitionMs = 350,    // smanji (npr. 180) za bržu tranziciju
   onFinish,
 }: PreloaderProps) {
   const prefersReduced = useReducedMotion();
+
   const [visible, setVisible] = React.useState(true);
   const [idx, setIdx] = React.useState(0);
-  const startRef = React.useRef<number>(Date.now());
 
-  // Rotacija slogana
+  const startRef = React.useRef<number>(Date.now());
+  const finishedRef = React.useRef(false);
+  const onFinishRef = React.useRef<PreloaderProps["onFinish"]>(onFinish);
+
+  // držimo aktuelnu callback ref bez izazivanja rerendera
+  React.useEffect(() => {
+    onFinishRef.current = onFinish;
+  }, [onFinish]);
+
+  // Jedna, sigurna smena slogana (bez dupliranja intervala)
   React.useEffect(() => {
     if (prefersReduced || !visible) return;
-    const id = setInterval(() => {
+
+    const interval = window.setInterval(() => {
       setIdx((i) => (i + 1) % slogans.length);
     }, Math.max(600, sloganIntervalMs));
-    return () => clearInterval(id);
+
+    return () => window.clearInterval(interval);
   }, [prefersReduced, visible, slogans.length, sloganIntervalMs]);
 
-  // Auto-hide posle load eventa + minimalnog trajanja
+  // One-shot hide: odradi se jednom kada je stranica "ready" + ispoštuje minimalno vreme
   React.useEffect(() => {
-    const finish = () => {
+    const finishOnce = () => {
+      if (finishedRef.current) return;
+      finishedRef.current = true;
+
       const elapsed = Date.now() - startRef.current;
       const wait = Math.max(0, minDurationMs - elapsed);
-      const t = setTimeout(() => {
+
+      const t = window.setTimeout(() => {
         setVisible(false);
-        onFinish?.();
+        onFinishRef.current?.();
       }, wait);
-      return () => clearTimeout(t);
+
+      // ako dođe do unmounta, počisti tajmer
+      return () => window.clearTimeout(t);
     };
 
-    if (document.readyState === "complete") return finish();
-    const onLoad = () => finish();
-    window.addEventListener("load", onLoad);
-    return () => window.removeEventListener("load", onLoad);
-  }, [minDurationMs, onFinish]);
+    // ako je već učitano, startuj odmah (ali i dalje poštuj minDurationMs)
+    if (document.readyState === "complete") {
+      const cleanup = finishOnce();
+      return cleanup;
+    }
 
-  // ms → s (Framer koristi sekunde)
+    // u suprotnom sačekaj 'load'
+    const onLoad = () => finishOnce();
+    window.addEventListener("load", onLoad, { once: true });
+
+    return () => window.removeEventListener("load", onLoad);
+  }, [minDurationMs]);
+
   const sloganTransSec = Math.max(80, sloganTransitionMs) / 1000;
 
   return (
@@ -79,7 +101,7 @@ export default function Preloader({
           aria-busy="true"
           aria-live="polite"
         >
-          {/* glow */}
+          {/* glow pozadina */}
           <div
             className="pointer-events-none absolute -inset-24 blur-3xl opacity-30"
             style={{
@@ -89,16 +111,11 @@ export default function Preloader({
             aria-hidden="true"
           />
 
-          <div className="relative flex flex-col items-center gap-6 px-6 text-center">
-            {/* Logo (ako postoji) */}
-            <img
-              src={logoSrc}
-              alt="Viral Kurs"
-              className="h-30 w-auto opacity-90"
-              onError={(e) => ((e.currentTarget.style.display = "none"))}
-            />
+          <div className="relative flex flex-col items-start gap-6 px-6 text-left">
+            {/* Logo (opciono) */}
+     
 
-            {/* Spinner + slogan */}
+            {/* Spinner + slogani */}
             <div className="flex items-center gap-4">
               {/* kružni spinner */}
               <motion.span
@@ -114,7 +131,7 @@ export default function Preloader({
                 <span className="absolute inset-0 rounded-full border-2 border-primary border-t-transparent" />
               </motion.span>
 
-              {/* Rotirajući slogani */}
+              {/* Rotirajući slogani (uvek 1 interval) */}
               <div className="min-h-[1.75rem] sm:min-h-[2rem]">
                 <AnimatePresence mode="wait">
                   <motion.p
@@ -131,7 +148,7 @@ export default function Preloader({
               </div>
             </div>
 
-            {/* Progress bar – tempo usklađen sa intervalom slogana */}
+            {/* Progress bar */}
             {!prefersReduced && (
               <motion.div
                 className="h-1 w-48 sm:w-64 rounded-full bg-white/10 overflow-hidden"

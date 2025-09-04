@@ -23,10 +23,7 @@ export default function TermsPage() {
 
         {/* Legal notice box */}
         <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
-          <p className="text-sm text-muted">
-            <strong>Napomena:</strong> Zameni placeholdere svojim podacima pre
-            objave. Preporučujemo pravnu proveru.
-          </p>
+         
           <ul className="mt-2 list-disc pl-5 text-sm text-muted space-y-1">
             <li>
               Viral Programi

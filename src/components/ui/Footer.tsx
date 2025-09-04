@@ -99,7 +99,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-muted">
-            © {year} Viral Programi. Sva prava zadržana.
+            © {year} Viral Academy. Sva prava zadržana.
           </p>
 
           <div className="flex items-center gap-4 text-xs text-muted">

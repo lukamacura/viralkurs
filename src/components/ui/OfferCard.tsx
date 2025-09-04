@@ -28,7 +28,6 @@ export default function OfferCard({
   ],
   includedTotal = "Ukupno: 300 € & 3 meseca (FREE)",
   guaranteeLabel = "Garancija 200% uključena",
-  discountPercent = 43,
   crossed = "70 €",
   price = "40 € jednokratno",
   priceNote = "(doživotan pristup, bez mesečnih troškova)",
@@ -135,13 +134,6 @@ export default function OfferCard({
 
           {/* Right pricing */}
           <div className="grid place-items-center gap-2  font-bold">
-            <div className="relative grid place-items-center">
-              <div className="h-24 w-24 rounded-full bg-white/8 border border-white/12" />
-              <div className="absolute h-20 w-20 rounded-full bg-primary text-bg font-bold grid place-items-center">
-                <span className=" text-2xl">{discountPercent}%</span>
-                <span className="text-xs -mt-1">popusta</span>
-              </div>
-            </div>
             <div className="text-muted line-through text-base -mt-1">{crossed}</div>
             <div className="text-center">
               <div className=" text-2xl">{price}</div>

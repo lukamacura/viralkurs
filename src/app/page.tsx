@@ -8,6 +8,8 @@ import OfferCard from "@/components/ui/OfferCard";
 import ExpertCard from "@/components/ui/ExpertCard";
 import Faq from "@/components/ui/Faq";
 import Navbar from "@/components/ui/Navbar";
+import Founder from "@/components/ui/Founder";
+import Footer from "@/components/ui/Footer";
 
 
 export default function Home() {
@@ -70,6 +72,8 @@ export default function Home() {
 
      <ExpertCard mockupSrc="/mockups/expert.png" />
      <Faq/>
+     <Founder/>
+     <Footer />
       </main>
   );
 }

@@ -10,11 +10,10 @@ type QA = { q: string; a: string };
 const faqs: QA[] = [
   { q: "Nemam iskustva, da li je program za mene?", a: "Da. Počinješ od osnova: kako da snimiš, urediš i objaviš sadržaj koji ima šansu da postane viralan. Vodiči su jednostavni i praktični." },
   { q: "Koliko vremena mi treba nedeljno?", a: "Realno 3–5 sati nedeljno je dovoljno da završiš lekcije i uradiš zadatke koji daju rezultat." },
-  { q: "Šta ako ne dobijem rezultate?", a: "Imaš 200% garanciju: vraćamo novac + dodatni bonus ako uz primenu ne vidiš pomak (detalji u sekciji Garancija)." },
-  { q: "Da li mogu da otkažem članarinu kad želim?", a: "Možeš u bilo kom trenutku — otkazivanje je 1 klik, bez skrivenih obaveza." },
-  { q: "Da li mi treba skupa oprema za snimanje?", a: "Ne. Dovoljan je telefon i osnovno svetlo. Daješ fokus na skriptu, kadriranje i hook." },
-  { q: "Koliko brzo mogu da dobijem prvog klijenta?", a: "Najčešće u prvih 30 dana uz preporučene objave i outreach sistem. Naravno zavisi od primene." },
-  { q: "Da li pomažete i oko pregovora sa klijentima?", a: "Da. Dobijaš skripte, ponude i mini–coaching kako da zatvoriš saradnju bez pritiska." },
+  { q: "Šta ako ne dobijem rezultate?", a: "Imaš 100% garanciju: vraćamo ti sav novac " },
+  { q: "Da li mi treba skupa oprema za snimanje?", a: "Ne. Od opreme dovoljan ti je samo mobilni telefon." },
+  { q: "Koliko brzo mogu da dobijem prvog klijenta?", a: "Svog prvog klijenta ti je Viral Launch obezbedio. Čim završiš sve lekcije, dobijaš svog prvog klijenta. " },
+  
 ];
 
 function Item({ qa }: { qa: QA }) {

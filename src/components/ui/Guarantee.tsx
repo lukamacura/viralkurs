@@ -17,7 +17,7 @@ export default function Guarantee({
     <section className="bg-bg py-16 lg:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
         {/* Heading */}
-        <h2 className="font-stencil text-5xl sm:text-6xl leading-none">Garancija 200%</h2>
+        <h2 className="font-stencil text-5xl sm:text-6xl leading-none">Garancija 100%</h2>
 
         {/* Big badge */}
         <div className="mt-8 flex justify-center">
@@ -36,7 +36,7 @@ export default function Guarantee({
             {[
               "znanje koje je pomenuto",
               "1 viralnu objavu",
-              "pristup kursu i zajednici",
+              "svog prvog klijenta",
             ].map((line, i) => (
               <li key={i} className="flex items-start gap-3">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 text-primary shrink-0" aria-hidden="true" />
@@ -49,12 +49,9 @@ export default function Guarantee({
         {/* Bold statements */}
         <div className="mt-12 sm:mt-14 font-bold">
           <p className="font-stencil uppercase text-primary leading-tight text-4xl sm:text-5xl md:text-6xl">
-            VRAĆAMO TI NOVAC
+            VRAĆAMO TI SAV NOVAC!
           </p>
-          <p className="font-stencil uppercase leading-tight text-3xl sm:text-4xl md:text-5xl mt-5">
-            I PLUS TI DAJEMO <span className="text-primary">{bonusAmount}€</span> ZA POTROŠENO
-            <br className="hidden sm:block" /> VREME
-          </p>
+          
         </div>
       </div>
     </section>

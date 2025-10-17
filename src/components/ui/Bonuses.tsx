@@ -24,9 +24,14 @@ export default function Bonuses({
 }) {
   const items: Bonus[] = [
     {
+      icon: <Target className="s w-7 text-primary" aria-hidden="true" />,
+      title:
+        "ZAGARANTOVAN PRVI KLIJENT: obezbeđena prva saradnja odmah nakon završenih lekcija! (na šta bi proveo nedelje tražeći)",
+    },
+    {
       icon: <Notebook className="s w-7 text-primary" aria-hidden="true" />,
       title:
-        "VODIČ: Kako organizovati dan i postati 3X produktivniji (realna vrednost 80 evra)",
+        "AUDIO KNJIGA: Mentalitet za uspeh & Organizaciju Vremena (realna vrednost 80 evra)",
     },
 
     {
@@ -36,11 +41,7 @@ export default function Bonuses({
       title:
         "SISTEM ZA PRAĆENJE FINANSIJA: Notion template za praćenje zarade, troškova i budžeta (realna vrednost 120 evra)",
     },
-    {
-      icon: <Target className="s w-7 text-primary" aria-hidden="true" />,
-      title:
-        "FOKUS SISTEM: Notion template za praćenje prioriteta, KPI-eva i zadataka (realna vrednost 100 evra)",
-    },
+    
   ];
 
   return (
@@ -60,7 +61,7 @@ export default function Bonuses({
         {/* Content grid */}
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.1fr,0.9fr] gap-10">
           {/* Levo — lista bonusa */}
-          <ul className="space-y-6">
+          <ul className="space-y-6 ">
             {items.map((it, i) => (
               <BonusRow key={i} item={it} />
             ))}

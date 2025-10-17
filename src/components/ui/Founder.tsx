@@ -28,7 +28,7 @@ export default function Founder() {
           transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          Upoznaj Filipa Ruvceskog, mentora iza najviralnijih objava na Balkanu
+          Upoznaj Filipa, mentora iza najviralnijih objava na Balkanu
         </motion.p>
 
         {/* Portret sa glowom i blagim „disanjem” */}

@@ -7,6 +7,7 @@ import {
   Users,
   Clapperboard,
   CheckCircle2,
+  Handshake,
 } from "lucide-react";
 
 /**
@@ -60,10 +61,12 @@ export default function LaunchBenefits() {
         <div className="mt-10 space-y-10">
           <Feature
             icon={<Infinity className="h-7 w-7 text-primary" aria-hidden="true" />}
-            title="Doživotan pristup lekcijama programa"
+            title="Detaljan kurs kako da kreiras Viralan Sadrzaj:"
             bullets={[
-              "Sve lekcije su zauvek tvoje",
-              "Redovno ažuriranje i nove lekcije uključene",
+              "Kako osmisliti Scenario koji ce otici Viralno?",
+              "Kako Snimiti Video, kao profesionalni kamerman?",
+              "Kako Izeditovati snimljen klip, samo telefonom?",
+              "Kako da tvoj sadrzaj napravi prodaje?",
             ]}
           />
 
@@ -72,7 +75,7 @@ export default function LaunchBenefits() {
             title="Domaći zadaci kroz koje učiš"
             bullets={[
               "Konkretne vežbe odmah posle svake lekcije",
-              "Jasna primena teorije u realnim objavama",
+              "Instrukcije kako da primenis znanje u praksi",
             ]}
           />
 
@@ -81,18 +84,19 @@ export default function LaunchBenefits() {
             title="Pristup WhatsApp grupi sa ostalim članovima"
             bullets={[
               "Povezivanje sa ljudima istih ciljeva",
-              "Brza razmena ideja, inspiracije i podrške",
+              "Brza razmena ideja, inspiracije i podrške od kolega",
+              "Rešenja za sve probleme sa kojima ćeš se susresti",
             ]}
           />
 
           <Feature
             icon={<Clapperboard className="h-7 w-7 text-primary" aria-hidden="true" />}
-            title="Praktični primeri svake lekcije"
+            title="Primeri iz kojih učiš tajne viralnosti"
             bullets={[
-              "Realni case study snimci i breakdown‑i",
               "Šabloni i modeli koje možeš odmah kopirati",
-            ]}
-          />
+              "Učiš kako da analiziraš greške & strategije drugih kreatora",
+            ]}/>
+          
         </div>
       </div>
     </section>

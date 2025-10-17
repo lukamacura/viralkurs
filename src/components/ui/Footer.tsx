@@ -13,7 +13,7 @@ import {
 type Social = { label: string; href: string; icon: React.ReactNode };
 
 const socials: Social[] = [
-  { label: "Instagram", href: "https://instagram.com/", icon: <Instagram className="h-5 w-5" /> },
+  { label: "Instagram", href: "https://www.instagram.com/filipruvceski/", icon: <Instagram className="h-5 w-5" /> },
 ];
 
 const year = new Date().getFullYear();

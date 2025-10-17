@@ -5,7 +5,6 @@ import Bonuses from "@/components/ui/Bonuses";
 import DecisionFlow from "@/components/ui/DecisionFlow";
 import Guarantee from "@/components/ui/Guarantee";
 import OfferCard from "@/components/ui/OfferCard";
-import ExpertCard from "@/components/ui/ExpertCard";
 import Faq from "@/components/ui/Faq";
 import Navbar from "@/components/ui/Navbar";
 import Founder from "@/components/ui/Founder";
@@ -70,7 +69,7 @@ export default function Home() {
 
 
 
-     <ExpertCard mockupSrc="/mockups/expert.png" />
+
      <Faq/>
      <Founder/>
      <Footer />

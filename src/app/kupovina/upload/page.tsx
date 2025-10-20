@@ -7,6 +7,7 @@ import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { User2, Mail, Upload, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 
 
@@ -20,13 +21,18 @@ export default function KupovinaPage() {
     const url = URL.createObjectURL(file);
     setPreview(url);
   }
+const router = useRouter();
 
 async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
   e.preventDefault();
   const formData = new FormData(e.currentTarget);
+
   const res = await fetch("/api/uplatnice", { method: "POST", body: formData });
-  const json = await res.json();
-  // ... tvoje dalje rukovanje (setSent(true) itd.)
+  if (res.ok) {
+    router.push("upload/success"); // ✅ jednostavno preusmeravanje
+  } else {
+    alert("Došlo je do greške prilikom slanja uplatnice.");
+  }
 }
 
   return (

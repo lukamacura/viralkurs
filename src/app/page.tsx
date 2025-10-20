@@ -34,17 +34,17 @@ export default function Home() {
         ozren={{
           name: "OZREN",
           description:
-            "Intervju o tome kako je Ozren sa 15 godina počeo da naplaćuje klijentima 300+ evra nakon 1 meseca ulaska u program",
+            "Intervju o tome kako je Luka sa 16 godina počeo da naplaćuje klijentima 300+ evra nakon 1 meseca ulaska u program",
           metricTime: "1 mesec",
-          metricMoney: "300+ evra po klijentu",
-          video: { kind: "video", src: "/videos/ozren.mp4", poster: "/posters/ozren.jpg" },
+          metricMoney: "1000 evra mesečno",
+          video: { kind: "video", src: "https://www.youtube.com/embed/XXXXXXXX"},
         }}
         djordje={{
-          name: "Đorđe",
+          name: "Vanja",
           description:
-            "Intervju o tome kako je Đorđe od kockara došao do toga da može sebi da priušti šta god hoće i uspešno naplaćuje klijentima svoje usluge",
+            "Intervju o tome kako je Vanja od kockara došao do toga da može sebi da priušti šta god hoće i uspešno naplaćuje klijentima svoje usluge",
           metricTime: "3 meseca",
-          metricMoney: "500+ evra po klijentu",
+          metricMoney: "200+ evra po klijentu",
           video: { kind: "iframe", src: "https://www.youtube.com/embed/XXXXXXXX" },
         }}
       /><LaunchBenefits />
@@ -61,10 +61,7 @@ export default function Home() {
 
         <OfferCard
       mockups={["/mockups/Offer.png"]}
-      discountPercent={43}
-      crossed="70 €"
-      price="40 € jednokratno"
-      ctaHref="#kupovina"
+
     />
 
 

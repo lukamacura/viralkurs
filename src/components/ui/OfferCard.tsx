@@ -32,7 +32,7 @@ export default function OfferCard({
   price = "50 € jednokratno",
   priceNote = "(doživotan pristup, bez mesečnih troškova)",
   paymentNote = "Sigurna naplata uplatnicom",
-  ctaHref = "#kupovina",
+  ctaHref = "/kupovina",
   ctaText = "Želim da uspem i da zarađujem",
   deadlinePrefix = "Ovu cenu možemo garantovati do",
 }: {

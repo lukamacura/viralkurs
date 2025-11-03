@@ -14,9 +14,8 @@ import Youtube from "@/components/ui/Youtube";
 // Glavna strana
 export default function Home() {
   return (
-    <main className="min-h-screen grid place-items-center ">
-            <Navbar />
-
+    <main className="min-h-screen grid place-items-center">
+<Navbar />
  <Hero
         mockupOneSrc="mockups/launch.png"     // promeni putanju do slike
         mockupTwoSrc="mockups/expert.png"     // promeni putanju do slike

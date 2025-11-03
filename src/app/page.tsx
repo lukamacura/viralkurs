@@ -9,6 +9,7 @@ import Faq from "@/components/ui/Faq";
 import Navbar from "@/components/ui/Navbar";
 import Founder from "@/components/ui/Founder";
 import Footer from "@/components/ui/Footer";
+import Youtube from "@/components/ui/Youtube";
 
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
 
         
       />    
-      
+      <Youtube videoId="BWffMjTQ6-o"/>
       <Testimonials
         gallery={["/chats/c1.png", "/chats/c2.png", "/chats/c3.png"]}
         ozren={{

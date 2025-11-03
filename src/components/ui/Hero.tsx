@@ -76,13 +76,7 @@ export default function Hero({
             </motion.p>
 
             {/* VIDEO PLACEHOLDER */}
-            <motion.div
-              {...fadeUp(0.1)}
-              className="mt-7 rounded-2xl border border-white/10 bg-white/5 aspect-video w-full grid place-items-center text-lg sm:text-xl font-semibold"
-              style={glowStyle}
-            >
-              VSL SA THUMBNAILOM
-            </motion.div>
+    
 
             {/* AVATARS */}
             <motion.div {...fadeUp(0.15)} className="mt-5 flex items-center gap-4">

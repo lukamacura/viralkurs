@@ -11,7 +11,7 @@ import Founder from "@/components/ui/Founder";
 import Footer from "@/components/ui/Footer";
 import Youtube from "@/components/ui/Youtube";
 
-
+// Glavna strana
 export default function Home() {
   return (
     <main className="min-h-screen grid place-items-center ">

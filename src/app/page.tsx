@@ -29,26 +29,10 @@ export default function Home() {
         
       />    
       <Youtube videoId="BWffMjTQ6-o"/>
-      <Testimonials
-        gallery={["/chats/c1.png", "/chats/c2.png", "/chats/c3.png"]}
-        ozren={{
-          name: "Bajram",
-          description:
-            "Intervju o tome kako je Bajram sa 15 godina počeo da naplaćuje klijentima nakon 1 meseca ulaska u program",
-          metricTime: "1 mesec",
-          metricMoney: "600+ evra mesečno",
-          video: { kind: "video", src: "https://youtube.com/shorts/PvK-Tmfp-GQ?feature=share"},
-        }}
-        djordje={{
-          name: "Vanja",
-          description:
-            "Intervju o tome kako je Vanja od kockara došao do toga da može sebi da priušti šta god hoće i uspešno naplaćuje klijentima svoje usluge",
-          metricTime: "3 meseca",
-          metricMoney: "200+ evra po klijentu",
-          video: { kind: "iframe", src: "https://www.youtube.com/embed/XXXXXXXX" },
-        }}
-      /><LaunchBenefits />
       
+      
+      <LaunchBenefits />
+      <Youtube videoId="PvK-Tmfp-GQ"/>
       <Bonuses
       mockups={[
         "/mockups/bonus1.png",
